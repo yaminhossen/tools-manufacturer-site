@@ -1,9 +1,10 @@
 import React from 'react';
+import Tools from '../Tools/Tools';
 
 const Home = () => {
     return (
         <div>
-            <h3>This is our home</h3>
+            <Tools></Tools>
         </div>
     );
 };

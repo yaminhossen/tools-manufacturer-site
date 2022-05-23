@@ -1,0 +1,83 @@
+[
+    {
+        "_id": 1,
+        "name": "Apple",
+        "price": "200",
+        "description": "This is apple its contain malic acid. Apple are high in fiber. And apple contain lots of vitamins.",
+        "quantity": "45",
+        "suplier": "Ben Stocks",
+        "img": "https://i.ibb.co/yNj8VHY/apple.jpg"
+    },
+    {
+        "_id": 2,
+        "name": "Bannana",
+        "price": "120",
+        "description": "Bannana its contain basically iron. Its very important for instant growing energy.",
+        "quantity": "35",
+        "suplier": "Brendon",
+        "img": "https://i.ibb.co/p15W7zN/bannana1.jpg"
+    },
+    {
+        "_id": 3,
+        "name": "Berry",
+        "price": "230",
+        "description": "A berry is a small, pulpy, and often edible fruit. Typically, berries are juicy, rounded, brightly colored, sweet, sour or tart.",
+        "quantity": "56",
+        "suplier": "Nayeem",
+        "img": "https://i.ibb.co/dMp0g6G/berry.jpg"
+    },
+    {
+        "_id": 4,
+        "name": "Lichi",
+        "price": "180",
+        "description": "The fruits are oval to round, strawberry-red in colour, and about 25 mm (1 inch) in diameter. The brittle outer covering encloses a translucent white fleshy aril.",
+        "quantity": "24",
+        "suplier": "Tamim",
+        "img": "https://i.ibb.co/Fb9SB4Q/lichi.jpg"
+    },
+    {
+        "_id": 5,
+        "name": "Mango",
+        "price": "250",
+        "description": "The mango fruit is roughly oval in shape, with uneven sides. The flesh is soft and bright yellow-orange in color. The skin of the fruit is yellow-green to red.",
+        "quantity": "23",
+        "suplier": "Amir",
+        "img": "https://i.ibb.co/hBV8Dg8/mango.jpg"
+    },
+    {
+        "_id": 6,
+        "name": "Orange",
+        "price": "270",
+        "description": "The orange is a usually round or oval citrus; its rind and flesh are generally orange, except the varieties of red pulp. orange contain citric acid.",
+        "quantity": "17",
+        "suplier": "Jamil",
+        "img": "https://i.ibb.co/5KcBL85/orange2.jpg"
+    },
+    {
+        "_id": 7,
+        "name": "PineApple",
+        "price": "170",
+        "description": "The tough, waxy rind, made up of hexagonal units, may be dark-green, yellow, orange-yellow or reddish when the fruit is ripe. The flesh ranges from nearly white to yellow.",
+        "quantity": "19",
+        "suplier": "Tuhin",
+        "img": "https://i.ibb.co/P9H00s4/pineapple.jpg"
+    },
+    {
+        "_id": 8,
+        "name": "Red Berry",
+        "price": "240",
+        "description": "Sweet, tart and flavorful, berries are delicious as a snack, or desert and other in salads. Include them in your daily diet for increased health",
+        "quantity": "14",
+        "suplier": "Mahin",
+        "img": "https://i.ibb.co/Ns7k7KF/redberry1.jpg"
+    },
+    {
+        "_id": 9,
+        "name": "Strawberry",
+        "price": "300",
+        "description": "Strawberries are soft, sweet, bright red berries. They're also delicious. Strawberries have tiny edible seeds, which grow all over their surface.",
+        "quantity": "10",
+        "suplier": "Shahin",
+        "img": "https://i.ibb.co/CbGqYTD/strawberry1.jpg"
+    }
+]
