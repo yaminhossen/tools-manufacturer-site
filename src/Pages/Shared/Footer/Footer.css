@@ -1,0 +1,11 @@
+.footer {
+    background-color: rgb(9, 2, 2);
+    height: 200px;
+    padding-top: 100px;
+    color: white;
+}
+
+.footer img {
+    width: 30px;
+
+}

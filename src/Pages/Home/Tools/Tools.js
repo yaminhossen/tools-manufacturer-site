@@ -11,7 +11,7 @@ const Tools = () => {
     }, [])
     return (
         <div className='tools'>
-            <h3>Thsi is our tools: {tools.length}</h3>
+            <h3 className='tools-title'>Thsi is our tools: {tools.length}</h3>
             <div className=" w-100 mx-auto container px-4 tools-container">
                 {
                     tools.map(tool => <Tool
