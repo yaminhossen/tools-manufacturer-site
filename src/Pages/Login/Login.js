@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -16,6 +16,9 @@ const Login = () => {
         console.log(email, password);
 
 
+    }
+    const navigateRegister = event => {
+        navigate('/register');
     }
     return (
         <div className='container w-50 mx-auto'>
@@ -36,6 +39,7 @@ const Login = () => {
                     Login
                 </Button>
             </Form>
+            <p className='mt-2'>Are you first time? <Link to="/register" className='text-primary text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
         </div>
     );
 };
