@@ -9,7 +9,7 @@ const Login = () => {
     const passwordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
-    // let from = location.state?.from?.pathname || "/";
+    let from = location.state?.from?.pathname || "/";
 
     const [
         signInWithEmailAndPassword,
@@ -32,7 +32,7 @@ const Login = () => {
         navigate('/register');
     }
     if (user) {
-        navigate('/home');
+        navigate(from, { replace: true });
     }
     return (
         <div className='container w-50 mx-auto'>
