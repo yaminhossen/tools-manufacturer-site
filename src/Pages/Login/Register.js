@@ -5,6 +5,8 @@ import auth from '../../firebase.init';
 import './Register.css'
 import SocialLogin from './SocialLogin';
 import Loading from '../Shared/Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
     const [
@@ -23,7 +25,7 @@ const Register = () => {
         navigate('/login')
     }
 
-    if (loading) {
+    if (loading || updating) {
         return <Loading></Loading>
     }
     if (user) {
@@ -39,7 +41,7 @@ const Register = () => {
         console.log(name, email, password);
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
-        alert('updated profile')
+        toast('updated profile')
 
     }
     return (
@@ -54,6 +56,7 @@ const Register = () => {
             <p className='mx-auto w-50'>Already have an account? <Link to="/login" className='text-primary text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
             <div className='w-50 mx-auto'>
                 <SocialLogin></SocialLogin>
+                <ToastContainer />
             </div>
         </div>
     );

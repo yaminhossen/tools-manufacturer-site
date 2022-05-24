@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import './Banner.css'
-import banner1 from '../../../images/banner/lemon.jpg'
+// import banner1 from '../../../images/banner/lemon.jpg'
 import banner2 from '../../../images/banner/strawberry.jpg'
-import banner3 from '../../../images/banner/blackapple.jpg'
+// import banner3 from '../../../images/banner/blackapple.jpg'
 
 const Banner = () => {
     const [index, setIndex] = useState(0);
@@ -13,7 +13,7 @@ const Banner = () => {
     };
     return (
         <Carousel className='banner' activeIndex={index} onSelect={handleSelect}>
-            <Carousel.Item>
+            {/* <Carousel.Item>
                 <img
                     className="d-block w-100"
                     src={banner1}
@@ -23,7 +23,7 @@ const Banner = () => {
                     <h3>Fruits Warehouse</h3>
                     <p>Here have different type of lemon. specialy for summar.</p>
                 </Carousel.Caption>
-            </Carousel.Item>
+            </Carousel.Item> */}
             <Carousel.Item>
                 <img
                     className="d-block w-100"
@@ -36,7 +36,7 @@ const Banner = () => {
                     <p>Here some types of berrys. Which is very tasty.</p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item>
+            {/* <Carousel.Item>
                 <img
                     className="d-block w-100"
                     src={banner3}
@@ -49,7 +49,7 @@ const Banner = () => {
                         This is the fresh apple for your healthy life.
                     </p>
                 </Carousel.Caption>
-            </Carousel.Item>
+            </Carousel.Item> */}
         </Carousel>
     );
 };
