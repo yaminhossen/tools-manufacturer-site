@@ -3,6 +3,8 @@ import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loading from '../Shared/Loading/Loading';
+import SocialLogin from './SocialLogin';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -31,6 +33,9 @@ const Login = () => {
     const navigateRegister = event => {
         navigate('/register');
     }
+    if (loading) {
+        return <Loading></Loading>
+    }
     if (user) {
         navigate(from, { replace: true });
     }
@@ -54,6 +59,7 @@ const Login = () => {
                 </Button>
             </Form>
             <p className='mt-2'>Are you first time? <Link to="/register" className='text-primary text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
