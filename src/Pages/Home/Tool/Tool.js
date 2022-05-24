@@ -3,6 +3,9 @@ import './Tool.css'
 
 const Tool = ({ tool }) => {
     const { _id, description, name, price, img, suplier, quantity } = tool;
+    const navigateToPurchase = _id => {
+
+    }
     return (
         <div className='tool'>
             <img src={img} alt="" />
@@ -12,7 +15,7 @@ const Tool = ({ tool }) => {
             <h6>Price:{price}</h6>
             <h6>Quantity: {quantity}</h6>
             <p><>Description:{description}</></p>
-            <button>Place Order</button>
+            <button onClick={() => navigateToPurchase(_id)}>Place Order</button>
         </div>
     );
 };
