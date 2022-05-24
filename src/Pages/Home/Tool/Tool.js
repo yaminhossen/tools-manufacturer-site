@@ -1,10 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Tool.css'
 
 const Tool = ({ tool }) => {
     const { _id, description, name, price, img, suplier, quantity } = tool;
+    const navigate = useNavigate();
     const navigateToPurchase = _id => {
-
+        navigate(`/purchase/${_id}`);
     }
     return (
         <div className='tool'>
