@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
@@ -33,15 +33,30 @@ const Login = () => {
     const navigateRegister = event => {
         navigate('/register');
     }
-    if (loading) {
+    let errorElement;
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+    }
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    if (loading || sending) {
         return <Loading></Loading>
     }
     if (user) {
         navigate(from, { replace: true });
     }
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            alert('send email');
+        }
+        else {
+            alert('Please enter your email address');
+        }
+    }
     return (
         <div className='container w-50 mx-auto'>
-            <h2 className='text-center'>pleagse login</h2>
+            <h2 className='text-center'>Pleagse login</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
@@ -58,7 +73,9 @@ const Login = () => {
                     Login
                 </Button>
             </Form>
+            {errorElement}
             <p className='mt-2'>Are you first time? <Link to="/register" className='text-primary text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+            <p className='mt-2'>Forget Password? <button className='text-primary border-0 bg-white text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
             <SocialLogin></SocialLogin>
         </div>
     );
