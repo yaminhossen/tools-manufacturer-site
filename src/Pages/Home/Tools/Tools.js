@@ -9,6 +9,7 @@ const Tools = () => {
             .then(res => res.json())
             .then(data => setTools(data))
     }, [])
+    console.log(tools);
     return (
         <div id='tools' className='tools'>
             <h3 className='tools-title'>Thsi is our tools: {tools.length}</h3>
