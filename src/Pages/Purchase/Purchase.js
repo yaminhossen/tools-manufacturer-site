@@ -24,10 +24,37 @@ const Purchase = () => {
         const email = event.target.email.value;
         const minOrder = event.target.minorder.value;
         const quantity = event.target.quantity.value;
-        console.log(toolName, name, email, minOrder, quantity, oQuantity);
+        const price = event.target.price.value;
+        console.log(toolName, name, email, minOrder, quantity, oQuantity, price);
         // if (oQuantity < minOrder) {
         //     toast(`Please enter more than ${minOrder}`);
         // }
+        const booking = {
+            toolname: tool.name,
+            username: user.displayName,
+            useremail: user.email,
+            toolprice: tool.price,
+            oquantity: event.target.orderQuantity.value
+        }
+
+        fetch('http://localhost:5000/booking', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(booking)
+        })
+            .then(res => res.json())
+            .then(data => {
+                // toast('set booking successfuly');
+                console.log(data);
+                if (data.success === true) {
+                    return toast(`booking is set for ${toolName}`)
+                }
+                else {
+                    toast(`Already booking is set for ${toolName}`)
+                }
+            })
     }
     return (
         <div>
@@ -44,7 +71,7 @@ const Purchase = () => {
                     <p>Name: <input type="name" disabled class="input input-bordered w-full max-w-xs" value={user.displayName} name="name" id="" /></p>
                     <p>Email: <input disabled type="email" class="input input-bordered w-full max-w-xs" name="email" value={user.email} id="" /></p>
                     <p>City: <input placeholder='Enter your city name' type="text" class="input input-bordered w-full max-w-xs" name="text" id="" /></p>
-                    <p>Phone: <input placeholder='Enter phone number' type="number" class="input input-bordered w-full max-w-xs" name="number" id="" /></p>
+                    <p>Phone: <input placeholder='Enter phone number' type="number" class="input input-bordered w-full max-w-xs" name="pnumber" id="" /></p>
 
                     <p>Tool: <input type="name" disabled name="tname" class="input input-bordered w-full max-w-xs" value={tool.name} id="" /></p>
                     <p>Min-Order: <input type="number" disabled name="minorder" class="input input-bordered w-full max-w-xs" value={tool.minOrder} id="" /></p>
