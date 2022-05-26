@@ -16,6 +16,7 @@ const Purchase = () => {
             .then(res => res.json())
             .then(data => setTool(data));
     }, [])
+
     const handleSubmit = event => {
         event.preventDefault();
         const oQuantity = event.target.orderQuantity.value;
@@ -29,6 +30,12 @@ const Purchase = () => {
         // if (oQuantity < minOrder) {
         //     toast(`Please enter more than ${minOrder}`);
         // }
+
+        // if (oQuantity < 20) {
+        //     toast('please increase')
+        // }
+
+
         const booking = {
             toolname: tool.name,
             username: user.displayName,
@@ -46,13 +53,11 @@ const Purchase = () => {
         })
             .then(res => res.json())
             .then(data => {
-                // toast('set booking successfuly');
-                console.log(data);
                 if (data.success === true) {
                     return toast(`booking is set for ${toolName}`)
                 }
                 else {
-                    toast(`Already booking is set for ${toolName}`)
+                    toast.error(`Already booking is set for ${toolName}`)
                 }
             })
     }

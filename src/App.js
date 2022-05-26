@@ -9,6 +9,7 @@ import NotFound from './Pages/Shared/NotFound/NotFound';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register';
 import RequireAuth from './Pages/Login/RequireAuth';
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -20,6 +21,11 @@ function App() {
         <Route path='/purchase/:purchaseId' element={
           <RequireAuth>
             <Purchase></Purchase>
+          </RequireAuth>
+        }></Route>
+        <Route path='dashboard' element={
+          <RequireAuth>
+            <Dashboard></Dashboard>
           </RequireAuth>
         }></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
