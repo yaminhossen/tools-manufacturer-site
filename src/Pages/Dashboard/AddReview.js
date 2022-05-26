@@ -37,7 +37,7 @@ const AddReview = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.success === true) {
+                if (data) {
                     return toast('Review is successfully set')
                 }
                 else {
