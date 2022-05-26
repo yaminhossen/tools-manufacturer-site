@@ -9,23 +9,10 @@ const AddReview = () => {
         const ratings = event.target.ratings.value;
         const description = event.target.description.value;
         console.log(ratings, description);
-        // const oQuantity = event.target.orderQuantity.value;
-        // const toolName = event.target.tname.value;
-        // const name = event.target.name.value;
-        // const email = event.target.email.value;
-        // const minOrder = event.target.minorder.value;
-        // const quantity = event.target.quantity.value;
-        // const price = event.target.price.value;
-        // console.log(toolName, name, email, minOrder, quantity, oQuantity, price);
 
         const review = {
             description: event.target.description.value,
             ratings: event.target.ratings.value
-            // toolname: tool.name,
-            // username: user.displayName,
-            // useremail: user.email,
-            // toolprice: tool.price,
-            // oquantity: event.target.orderQuantity.value
         }
 
         fetch('http://localhost:5000/review', {
