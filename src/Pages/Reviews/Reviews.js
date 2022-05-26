@@ -11,8 +11,8 @@ const Reviews = () => {
     }, [])
     console.log(reviews);
     return (
-        <div >
-            <h3 className='flex justify-center mt-12 text-4xl text-yellow-400'>The Review From Users:{reviews.length}</h3>
+        <div className='mt-24'>
+            <h3 className='flex justify-center m-24 mt-12 text-4xl text-yellow-400'>The Review From Users:{reviews.length}</h3>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 px-12'>
                 {
                     reviews.map(review => <Review
