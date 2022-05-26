@@ -1,4 +1,5 @@
 import React from 'react';
+import Reviews from '../../Reviews/Reviews';
 import Banner from '../Banner/Banner';
 import Tools from '../Tools/Tools';
 
@@ -7,6 +8,7 @@ const Home = () => {
         <>
             <Banner></Banner>
             <Tools></Tools>
+            <Reviews></Reviews>
         </>
     );
 };

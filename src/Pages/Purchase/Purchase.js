@@ -27,14 +27,6 @@ const Purchase = () => {
         const quantity = event.target.quantity.value;
         const price = event.target.price.value;
         console.log(toolName, name, email, minOrder, quantity, oQuantity, price);
-        // if (oQuantity < minOrder) {
-        //     toast(`Please enter more than ${minOrder}`);
-        // }
-
-        // if (oQuantity < 20) {
-        //     toast('please increase')
-        // }
-
 
         const booking = {
             toolname: tool.name,
