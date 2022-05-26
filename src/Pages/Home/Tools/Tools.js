@@ -12,10 +12,10 @@ const Tools = () => {
     console.log(tools);
     return (
         <div id='tools' className='tools'>
-            <h3 className='tools-title'>Thsi is our tools: {tools.length}</h3>
+            <h3 className='tools-title'>Thsi is our tools</h3>
             <div className=" w-100 mx-auto container px-4 tools-container">
                 {
-                    tools.map(tool => <Tool
+                    tools.slice(-6).map(tool => <Tool
                         key={tool._id}
                         tool={tool}
                     ></Tool>)
