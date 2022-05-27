@@ -13,6 +13,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrder from './Pages/Dashboard/MyOrder';
 import AddReview from './Pages/Dashboard/AddReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
+import MyportFolio from './Pages/MyportFolio/MyportFolio';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
         </Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/myportfolio' element={<MyportFolio></MyportFolio>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
