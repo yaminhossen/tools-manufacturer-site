@@ -1,5 +1,6 @@
 import React from 'react';
 import ExtraSection1 from '../../ExtraSection/ExtraSection1';
+import ExtraSection2 from '../../ExtraSection/ExtraSection2';
 import Reviews from '../../Reviews/Reviews';
 import Summury from '../../Summury/Summury';
 import Banner from '../Banner/Banner';
@@ -13,6 +14,7 @@ const Home = () => {
             <Summury></Summury>
             <Reviews></Reviews>
             <ExtraSection1></ExtraSection1>
+            <ExtraSection2></ExtraSection2>
         </>
     );
 };
