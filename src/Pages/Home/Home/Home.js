@@ -1,4 +1,5 @@
 import React from 'react';
+import ExtraSection1 from '../../ExtraSection/ExtraSection1';
 import Reviews from '../../Reviews/Reviews';
 import Summury from '../../Summury/Summury';
 import Banner from '../Banner/Banner';
@@ -11,6 +12,7 @@ const Home = () => {
             <Tools></Tools>
             <Summury></Summury>
             <Reviews></Reviews>
+            <ExtraSection1></ExtraSection1>
         </>
     );
 };

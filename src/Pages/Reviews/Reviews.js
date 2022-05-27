@@ -12,7 +12,8 @@ const Reviews = () => {
     console.log(reviews);
     return (
         <div className='mt-24'>
-            <h3 className='flex justify-center m-24 mt-12 text-4xl text-yellow-400'>The Review From Users:{reviews.length}</h3>
+            <h3 className='flex justify-center font-bold text-secondary  mt-12 text-4xl '>The Review From Users:{reviews.length}</h3>
+            <p className='text-center pb-12'>We have worked with hundreds of different clients around the globe. Check what a selection of them have to say about us.</p>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 px-12'>
                 {
                     reviews.map(review => <Review
