@@ -13,27 +13,27 @@ const Header = () => {
     }
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="primary" sticky='top' variant="black">
-                <Container>
-                    <Navbar.Brand as={Link} to="/"><img width='70px' src={logo} alt="" /></Navbar.Brand>
+            <Navbar collapseOnSelect expand="lg" className=' bg-gray-500' sticky='top' variant="black">
+                <Container className='mx-20'>
+                    <Navbar.Brand as={Link} to="/"><img width='80px' src={logo} alt="" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link href="home#tools">Tools</Nav.Link>
+                        <Nav className="me-auto text-lg  ">
+                            <Nav.Link href="home#tools"><span className='text-white'>Tools</span></Nav.Link>
                             {/* <Nav.Link href="#pricing">Pricing</Nav.Link> */}
 
                         </Nav>
-                        <Nav>
-                            <Nav.Link as={Link} to="myportfolio">MyportFolio</Nav.Link>
-                            <Nav.Link as={Link} to="blog">Blog</Nav.Link>
+                        <Nav className=''>
+                            <Nav.Link className='text-lg  text-white' as={Link} to="myportfolio">MyportFolio</Nav.Link>
+                            <Nav.Link className='text-lg  text-white' as={Link} to="blog">Blog</Nav.Link>
                             {
-                                user && <Nav.Link as={Link} to="dashboard">Dashboard</Nav.Link>
+                                user && <Nav.Link className='text-lg  text-white ' as={Link} to="dashboard">Dashboard</Nav.Link>
                             }
                             {
                                 user ?
-                                    <button className='btn btn-link text-decoration-none text-white' onClick={handleSignOut}>SignOut</button>
+                                    <button className='btn btn-link text-decoration-none text-white text-lg' onClick={handleSignOut}>SignOut</button>
                                     :
-                                    <Nav.Link as={Link} to="login">
+                                    <Nav.Link className=' text-lg  text-white' as={Link} to="login">
                                         Login
                                     </Nav.Link>
                             }

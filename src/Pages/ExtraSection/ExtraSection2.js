@@ -15,7 +15,7 @@ const ExtraSection2 = () => {
         event.preventDefault();
     }
     return (
-        <div className='mt-30'>
+        <div className=' my-20'>
 
             <div class="hero mt-30 min-h-screen bg-base-200">
                 <div class="hero-content flex-col lg:flex-row-reverse">

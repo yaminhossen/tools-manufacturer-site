@@ -8,7 +8,7 @@ const Review = ({ review }) => {
     console.log(user);
     return (
         <div>
-            <div class="card w-96 bg-neutral text-neutral-content">
+            <div class="card w-96 text-white bg-gray-500 text-neutral-content">
                 <div class="card-body items-center text-center">
                     <p>Description: {description}</p>
                     <h3>Ratings: {ratings}</h3>

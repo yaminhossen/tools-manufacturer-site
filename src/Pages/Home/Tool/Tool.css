@@ -4,6 +4,7 @@
     box-shadow: 3px 3px 4px 3px rgba(97, 97, 96, 0.2);
     text-align: center;
     /* position: relative; */
+    margin-right: 30px;
 
 
 }
@@ -18,12 +19,14 @@
 
 .tool button {
     border: none;
-    background-color: orange;
+    background-color: rgb(89, 98, 166);
     border-radius: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 0;
     width: 100%;
+    font-size: large;
+    color: white;
     /* position: fixed; */
 
 }

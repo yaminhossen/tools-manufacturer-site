@@ -9,14 +9,14 @@ const Tool = ({ tool }) => {
         navigate(`/purchase/${_id}`);
     }
     return (
-        <div className='tool'>
+        <div className='tool '>
             <img src={img} alt="" />
             <br />
-            <h3>Name: {name}</h3>
-            <h6>Min Order: {minOrder}</h6>
-            <h6>Price:{price}</h6>
-            <h6>Quantity: {quantity}</h6>
-            <p><>Description:{description}</></p>
+            <h3 className='text-xl'>Name: {name}</h3>
+            <h6 className='text-xl'>Min Order: {minOrder}</h6>
+            <h6 className='text-xl'>Price:{price}</h6>
+            <h6 className='text-xl'>Quantity: {quantity}</h6>
+            <p className='m-2 text-sm'><>Description:{description}</></p>
             <button onClick={() => navigateToPurchase(_id)}>Purchase</button>
         </div>
     );

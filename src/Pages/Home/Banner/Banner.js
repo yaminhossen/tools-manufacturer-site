@@ -32,8 +32,8 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Fruits Warehouse</h3>
-                    <p>Here some types of berrys. Which is very tasty.</p>
+                    <h3 className='text-2xl font-bold pb-2'>Tools Manufacturer Site</h3>
+                    <p className='text-xl pb-12'>Here have some tools. Which is very important for you.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             {/* <Carousel.Item>

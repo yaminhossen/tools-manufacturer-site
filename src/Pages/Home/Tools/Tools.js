@@ -12,8 +12,8 @@ const Tools = () => {
     console.log(tools);
     return (
         <div id='tools' className='tools'>
-            <h3 className='tools-title'>Thsi is our tools</h3>
-            <div className=" w-100 mx-auto container px-4 tools-container">
+            <h3 className='tools-title text-3xl'>This is our tools</h3>
+            <div className=" w-100 mx-auto container px-20 tools-container">
                 {
                     tools.slice(-6).map(tool => <Tool
                         key={tool._id}
