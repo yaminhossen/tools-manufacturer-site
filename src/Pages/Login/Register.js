@@ -46,7 +46,7 @@ const Register = () => {
     }
     return (
         <div className='register-form'>
-            <h2 className='text-center'>Please register</h2>
+            <h2 className='text-center text-center text-2xl text-blue-400 p-4 font-bold'>Please register</h2>
             <form onSubmit={handleRegister}>
                 <input type="text" name="name" id="" placeholder='Your Name' />
                 <input type="email" name="email" id="" placeholder='Email Address' required />
