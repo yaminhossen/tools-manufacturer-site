@@ -8,7 +8,7 @@ const MyProfile = () => {
     const [user] = useAuthState(auth);
     const [profiles, setProfiles] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/profile')
+        fetch('https://damp-eyrie-00701.herokuapp.com/profile')
             .then(res => res.json())
             .then(data => setProfiles(data));
     }, [])
@@ -28,7 +28,7 @@ const MyProfile = () => {
             number: event.target.numbera.value
         }
 
-        fetch('http://localhost:5000/profile', {
+        fetch('https://damp-eyrie-00701.herokuapp.com/profile', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

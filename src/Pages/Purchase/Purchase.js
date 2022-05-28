@@ -11,7 +11,7 @@ const Purchase = () => {
     const [user] = useAuthState(auth);
     const [tool, setTool] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/tool/${purchaseId}`
+        const url = `https://damp-eyrie-00701.herokuapp.com/tool/${purchaseId}`
         fetch(url)
             .then(res => res.json())
             .then(data => setTool(data));
@@ -36,7 +36,7 @@ const Purchase = () => {
             oquantity: event.target.orderQuantity.value
         }
 
-        fetch('http://localhost:5000/booking', {
+        fetch('https://damp-eyrie-00701.herokuapp.com/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

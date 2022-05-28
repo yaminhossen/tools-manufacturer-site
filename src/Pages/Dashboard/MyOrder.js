@@ -11,13 +11,13 @@ const MyOrder = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/booking?useremail=${user.email}`)
+            fetch(`https://damp-eyrie-00701.herokuapp.com/booking?useremail=${user.email}`)
                 .then(res => res.json())
                 .then(data => setOrders(data));
         }
     }, [user])
     const handleDelete = (email) => {
-        fetch(`http://localhost:5000/booking/${email}`, {
+        fetch(`https://damp-eyrie-00701.herokuapp.com/booking/${email}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
