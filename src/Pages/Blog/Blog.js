@@ -4,7 +4,7 @@ import find from '../../images/extra/findProduct.png';
 const Blog = () => {
     return (
         <div className='w-3/5 mx-auto mt-10'>
-            <h2 className='text-blue-400 text-2xl mt-2 mb-1'>How does word prototypical inheritance work?</h2>
+            <h2 className='text-blue-400 text-2xl mt-2 mb-1'>How does prototypical inheritance work?</h2>
             <h3>Answer: The Prototypal Inheritance is a feature in javascript. Each object has a private property which holds a link to another object called its prototype. It is used to add method an properties in object. Its get and set the prototype in object. And we use like Object.getPrototype and Object.setPrototype.</h3>
             <h2 className='text-blue-400 text-2xl mt-2 mb-1'>What is unit test? Why should write unit tests?</h2>
             <h3>Answer: Unit testing is a type software. Unit Testing is the process of checking small pieces of code for any issues. <br />
